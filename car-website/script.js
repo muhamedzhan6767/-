@@ -65,7 +65,7 @@
       id: "camry55-2016", brand: "Toyota", model: "Camry 55", generation: "XV55 · 7th generation (facelift)",
       year: 2016, price: 10900000, mileage: 146000, engine: "2.0 L", power: 150, fuel: "Petrol",
       transmission: "Automatic (6-speed)", drive: "FWD", body: "Sedan", city: "Astana",
-      color: "Graphite Grey", hex: "#4b5563", badges: [],
+      color: "Super White", hex: "#f5f5f5", badges: [],
       description: "Economical Camry 55 with the 2.0 engine. A smart choice for a first family sedan or business use.",
       features: ["Climate control", "Parking sensors", "Bluetooth audio", "Cruise control", "Fog lights"]
     },
@@ -182,6 +182,8 @@
     "tucson-2023": {"file": "images/tucson-2023.jpg", "title": "HYUNDAI TUCSON HYBRID (NX4) China.jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:HYUNDAI_TUCSON_HYBRID_(NX4)_China.jpg"},
     "santafe-2021": {"file": "images/santafe-2021.jpg", "title": "Hyundai Santa Fe TM FL White 1.jpg", "author": "Damian B Oh", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Santa_Fe_TM_FL_White_1.jpg"},
     "palisade-2022": {"file": "images/palisade-2022.jpg", "title": "Hyundai Palisade LX2 Steel Graphite (6).jpg", "author": "Damian B Oh", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Palisade_LX2_Steel_Graphite_(6).jpg"},
+    "camry55-2017": {"file": "images/camry55-2017.jpg", "title": "Toyota Camry XV50 facelift 01 China 2015-04-10.jpg", "author": "Navigator84", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_XV50_facelift_01_China_2015-04-10.jpg"},
+    "camry55-2016": {"file": "images/camry55-2016.jpg", "title": "Toyota Camry XV50 facelift 02 China 2015-04-10.jpg", "author": "Navigator84", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_XV50_facelift_02_China_2015-04-10.jpg"},
     /*PHOTOS_END*/
   };
 
