@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AutoLine KZ — Car dealership website
+   Mahmud's Cars — Car dealership website
    script.js  (vanilla JavaScript, no libraries)
 
    1.  Car data                     8.  Car details modal
@@ -159,6 +159,17 @@
     }
   ];
 
+  /* ------------------------------------------------------------------------
+     PHOTOS
+     Real photos from Wikimedia Commons (free licenses), saved in images/.
+     Each entry credits the author and license, as the licenses require.
+     If a photo file is missing, the drawn SVG car is shown instead.
+     ------------------------------------------------------------------------ */
+  const photos = {
+    /*PHOTOS_START*/
+    /*PHOTOS_END*/
+  };
+
   /* Default loan settings used for the "from ... / month" estimate on cards */
   const LOAN_DEFAULTS = { downPct: 30, months: 48, rate: 21 };
 
@@ -255,10 +266,34 @@
 </svg>`;
   }
 
+  // Real photo of the car (or the SVG drawing if no photo is available)
+  function carImage(car, cls = "", eager = false) {
+    const p = photos[car.id];
+    if (!p) return carSVG(car.hex, car.body);
+    return `<img class="car-photo ${cls}" src="${p.file}" alt="${carName(car)} ${car.year}, ${car.color}"
+      ${eager ? "" : 'loading="lazy"'} decoding="async" data-hex="${car.hex}" data-body="${car.body}">`;
+  }
+
+  // If a photo fails to load (e.g. file deleted), swap in the drawing
+  document.addEventListener("error", (e) => {
+    const img = e.target;
+    if (img.tagName !== "IMG" || !img.classList.contains("car-photo")) return;
+    const holder = document.createElement("div");
+    holder.innerHTML = carSVG(img.dataset.hex, img.dataset.body);
+    img.replaceWith(holder.firstElementChild);
+  }, true);
+
+  function creditHTML(car) {
+    const p = photos[car.id];
+    if (!p) return "";
+    return `<p class="photo-credit">Photo: <a href="${p.source}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.author)}</a>,
+      <a href="${p.licenseUrl}" target="_blank" rel="noopener noreferrer">${p.license}</a>, via Wikimedia Commons</p>`;
+  }
+
   /* ------------------------------------------------------------------------
      3. FAVORITES — saved in the browser (localStorage), safe if unavailable
      ------------------------------------------------------------------------ */
-  const FAV_KEY = "autoline-favorites";
+  const FAV_KEY = "mahmudscars-favorites";
   let favorites = new Set();
   try {
     favorites = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
@@ -341,7 +376,7 @@
     return `
       <article class="car-card" data-id="${car.id}">
         <div class="car-media" data-action="details" role="button" tabindex="-1" aria-hidden="true">
-          ${carSVG(car.hex, car.body)}
+          ${carImage(car)}
           <div class="car-badges">${badges}</div>
         </div>
         <button class="fav-btn ${fav ? "active" : ""}" data-action="fav" aria-pressed="${fav}" aria-label="${fav ? "Remove" : "Save"} ${carName(car)} ${car.year}">
@@ -584,7 +619,8 @@
     return `
       <div class="detail-grid">
         <div>
-          <div class="detail-media">${carSVG(car.hex, car.body)}</div>
+          <div class="detail-media">${carImage(car, "", true)}</div>
+          ${creditHTML(car)}
           <div class="color-row"><span class="swatch" style="background:${car.hex}"></span>${car.color}</div>
           <h4 class="detail-h">Key features</h4>
           <ul class="feature-list">${car.features.map((f) => `<li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>${f}</li>`).join("")}</ul>
@@ -738,7 +774,7 @@
         }).join("")}</tr>`;
       wrap.innerHTML = `
         <table class="compare-table">
-          <thead><tr><th></th>${list.map((c) => `<th class="ct-car">${carSVG(c.hex, c.body)}<span class="ct-name">${carName(c)} ${c.year}</span></th>`).join("")}</tr></thead>
+          <thead><tr><th></th>${list.map((c) => `<th class="ct-car">${carImage(c, "", true)}<span class="ct-name">${carName(c)} ${c.year}</span></th>`).join("")}</tr></thead>
           <tbody>
             ${row("Price", (c) => tenge(c.price), "price", "min")}
             ${row("Year", (c) => c.year, "year", "max")}
@@ -903,14 +939,21 @@
 
   // Hero featured car
   const heroCar = byId("camry80-2025");
-  $("#heroCar").innerHTML = carSVG(heroCar.hex, heroCar.body);
+  $("#heroCar").innerHTML = carImage(heroCar, "hero-photo", true);
   $("#heroCarName").textContent = `${carName(heroCar)} ${heroCar.year}`;
   $("#heroCarPrice").textContent = tenge(heroCar.price);
   $("#heroCarBtn").addEventListener("click", (e) => openDetails(heroCar.id, e.currentTarget));
   $("#statCars").textContent = cars.length;
 
   // Camry guide illustrations and "from" prices
-  $$("[data-car-art]").forEach((el) => (el.innerHTML = carSVG(el.dataset.color, "Sedan")));
+  $$("[data-car-id]").forEach((el) => (el.innerHTML = carImage(byId(el.dataset.carId))));
+
+  // Photo credits list in the footer
+  $("#photoCredits").innerHTML = cars.filter((c) => photos[c.id]).map((c) => {
+    const p = photos[c.id];
+    return `<li><strong>${carName(c)} ${c.year}:</strong> <a href="${p.source}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.title)}</a>
+      by ${escapeHTML(p.author)}, <a href="${p.licenseUrl}" target="_blank" rel="noopener noreferrer">${p.license}</a></li>`;
+  }).join("");
   [["gen55", "Camry 55"], ["gen70", "Camry 70"], ["gen80", "Camry 80"]].forEach(([elId, model]) => {
     const prices = cars.filter((c) => c.model === model).map((c) => c.price);
     $("#" + elId).textContent = prices.length ? tenge(Math.min(...prices)) : "—";

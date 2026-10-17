@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AutoLine KZ — Car dealership website
+   Mahmud's Cars — Car dealership website
    style.css
 
    1. Design tokens       7.  Camry guide
@@ -542,3 +542,38 @@ body.has-compare .toast { bottom: 90px; }
 
 /* Year next to the car name on cards */
 .car-title .muted { color: var(--dim); font-weight: 600; }
+
+/* ---------- Real car photos ---------- */
+.car-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+.car-media { padding: 0; height: 200px; overflow: hidden; background: #e9ebf0; }
+.car-media .car-photo { transition: transform .6s var(--ease); }
+.car-card:hover .car-media .car-photo { transform: scale(1.06); }
+.car-media svg { padding: 18px 14px 6px; }
+.car-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25), transparent 35%); pointer-events: none; }
+.car-badges, .fav-btn { z-index: 1; }
+
+.detail-media { padding: 0; overflow: hidden; aspect-ratio: 16 / 10; }
+.detail-media svg { padding: 30px 18px 14px; }
+.photo-credit { margin: 8px 0 0; font-size: .75rem; color: var(--dim); }
+.photo-credit a { text-decoration: underline; }
+
+.compare-table .ct-car .car-photo { width: 100%; max-width: 220px; height: auto; aspect-ratio: 16 / 10; margin-bottom: 8px; border-radius: 10px; }
+
+.gen-car { overflow: hidden; border-radius: 14px; aspect-ratio: 16 / 10; filter: none; box-shadow: 0 16px 30px -12px rgba(0,0,0,.6); }
+.gen-car .car-photo { transition: transform .6s var(--ease); }
+.gen-card:hover .gen-car .car-photo { transform: scale(1.05); }
+
+.hero-car { filter: none; }
+.hero-photo { aspect-ratio: 16 / 10; border-radius: 24px; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 40px 80px -30px rgba(0,0,0,.8), 0 0 0 8px rgba(255,255,255,.03); }
+.hero-card { margin-top: -56px; margin-left: 24px; }
+
+.credits { margin-top: 18px; font-size: .8rem; color: #8a90a0; }
+.credits summary { cursor: pointer; font-weight: 600; color: #c9ced8; }
+.credits summary:hover { color: #fff; }
+.credits p { margin: 10px 0; }
+.credits ul { display: grid; gap: 6px; }
+.credits a { color: #c9ced8; text-decoration: underline; }
+@media (max-width: 600px) {
+  .hero-card { margin: -40px 0 0 12px; }
+  .car-media { height: 190px; }
+}

@@ -1,4 +1,4 @@
-# AutoLine KZ — Toyota & Hyundai Car Dealership Website
+# Mahmud's Cars — Toyota & Hyundai Car Dealership Website
 
 A modern, responsive car-selling website built with **HTML5, CSS3 and vanilla JavaScript**.
 It lists Toyota and Hyundai cars, including the **Hyundai Grandeur** and the **Toyota Camry 55, Camry 70 and Camry 80**,
@@ -67,7 +67,7 @@ To use real photos, put an image such as `photos/camry70.jpg` in the folder, the
 `<img src="photos/${car.id}.jpg" alt="${carName(car)} ${car.year}">`. Use only photos you have the right to use.
 
 ### Dealership name and contacts
-In `index.html`, search for `AutoLine` and `CUSTOMIZE`. Replace the phone number, email and social links (they're placeholders).
+In `index.html`, search for `Mahmud` and `CUSTOMIZE`. Replace the phone number, email and social links (they're placeholders).
 
 ### Colors
 Change `--red`, `--ink` and the other variables at the top of `style.css`.
