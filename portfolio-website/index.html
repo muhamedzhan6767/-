@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CUSTOMIZE: Update the page title and description with your own name -->
+  <title>Alex Morgan | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Alex Morgan — student and aspiring technology professional. Education, skills, projects, achievements and contact details.">
+  <meta name="theme-color" content="#0a0b1e">
+
+  <!-- Marks that JavaScript is available, so scroll animations only hide content when JS can reveal it -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Favicon: an inline SVG so no extra file is needed -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle' dominant-baseline='middle'%3EAM%3C/text%3E%3C/svg%3E">
+
+  <!--
+    Google Fonts (optional). If the fonts cannot load (offline, blocked network),
+    style.css falls back to system fonts automatically, so the page still looks good.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--
+    SVG icon sprite.
+    All icons are defined once here and reused with <use href="#icon-name">.
+    Because they are inline, icons always work — no icon font or CDN required.
+  -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-code" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-js" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4zM10 9v6a2 2 0 0 1-3 1.5M17 9.5a2 2 0 0 0-3 .5c0 2.5 4 1.5 4 4a2 2 0 0 1-3.5 1"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19.4 14.6a2.5 2.5 0 1 0 0-5H18V6a2 2 0 0 0-2-2h-3.6v1.4a2.5 2.5 0 1 1-5 0V4H4v4.6h1.4a2.5 2.5 0 1 1 0 5H4V20h3.4v-1.4a2.5 2.5 0 1 1 5 0V20H16a2 2 0 0 0 2-2v-3.4z"/></symbol>
+    <symbol id="i-present" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 3h20M3 3v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3M12 16v5M8 21h8M7 12l3-3 2 2 4-4"/></symbol>
+    <symbol id="i-tasks" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3 6 2 2 4-4M3 14l2 2 4-4M13 6h8M13 14h8M13 20h8M3 20h6"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5M22 10v6"/></symbol>
+    <symbol id="i-school" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5M8 7h8M8 11h6"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 22V4M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2zM9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM20 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 3h18v18H3zM3 9h18M9 21V9"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM22 6l-10 7L2 6"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0zM12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9zM19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01"/></symbol>
+  </svg>
+
+  <!-- Skip link: lets keyboard and screen-reader users jump straight to the content -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- CUSTOMIZE: Change the initials in the logo -->
+      <a href="#home" class="logo" aria-label="Alex Morgan — back to top">
+        <span class="logo-mark">AM</span>
+        <span class="logo-text">Alex<span class="accent">.</span>Morgan</span>
+      </a>
+
+      <!-- Mobile menu button (visible on small screens only) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <!-- Decorative animated background blobs -->
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="grid-overlay"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to internships &amp; collaborations
+          </p>
+
+          <!-- CUSTOMIZE: Your name and title -->
+          <h1 class="hero-title" id="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Morgan</span>
+          </h1>
+          <p class="hero-subtitle">
+            Student <span class="divider" aria-hidden="true">|</span>
+            <span class="typed" id="typedText">Aspiring Technology Professional</span>
+          </p>
+
+          <!-- CUSTOMIZE: Your short introduction -->
+          <p class="hero-intro">
+            I am a motivated student passionate about technology, business, and creative problem-solving.
+            I enjoy learning new skills, building projects, and turning ideas into practical solutions.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              Explore My Work
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Contact Me
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            </a>
+          </div>
+
+          <!-- Small highlight stats (sample numbers — edit freely) -->
+          <ul class="hero-stats" aria-label="Quick highlights">
+            <li><strong data-count="3">0</strong><span>Featured projects</span></li>
+            <li><strong data-count="8">0</strong><span>Core skills</span></li>
+            <li><strong data-count="100" data-suffix="%">0</strong><span>Curiosity</span></li>
+          </ul>
+        </div>
+
+        <!-- Profile image / avatar -->
+        <div class="hero-visual reveal" style="--delay: .15s">
+          <div class="avatar-wrap">
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <!--
+              CUSTOMIZE PROFILE IMAGE:
+              Replace the <div class="avatar-placeholder"> block below with:
+              <img class="avatar-img" src="profile.jpg" alt="Portrait of Alex Morgan">
+              and put your photo (profile.jpg) in the same folder as index.html.
+            -->
+            <div class="avatar" role="img" aria-label="Profile photo placeholder for Alex Morgan">
+              <div class="avatar-placeholder">
+                <svg viewBox="0 0 200 200" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#8b5cf6"/>
+                      <stop offset="1" stop-color="#3b82f6"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="78" r="38" fill="url(#avatarGrad)" opacity=".95"/>
+                  <path d="M30 190c4-42 34-66 70-66s66 24 70 66z" fill="url(#avatarGrad)" opacity=".95"/>
+                  <text x="100" y="79" class="avatar-initials" text-anchor="middle" dominant-baseline="central">AM</text>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Floating badges that highlight creativity and ambition -->
+            <div class="float-card fc-1" aria-hidden="true">
+              <span class="fc-icon"><svg class="icon"><use href="#i-bulb"/></svg></span>
+              <span><strong>Creative</strong><small>Thinker</small></span>
+            </div>
+            <div class="float-card fc-2" aria-hidden="true">
+              <span class="fc-icon"><svg class="icon"><use href="#i-rocket"/></svg></span>
+              <span><strong>Ambitious</strong><small>Learner</small></span>
+            </div>
+            <div class="float-card fc-3" aria-hidden="true">
+              <span class="fc-icon"><svg class="icon"><use href="#i-code"/></svg></span>
+              <span><strong>Builder</strong><small>of ideas</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <span class="mouse" aria-hidden="true"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">01 — About Me</span>
+          <h2 class="section-title" id="about-title">Curious mind, <span class="gradient-text">practical approach</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <!-- CUSTOMIZE: Your biography -->
+          <div class="about-text reveal">
+            <p class="lead">
+              I'm a university student who believes the best way to learn is by doing. I'm fascinated by how
+              technology and business come together to solve real problems for real people.
+            </p>
+            <p>
+              My interests sit at the intersection of <strong>technology</strong>, <strong>entrepreneurship</strong>,
+              and <strong>personal development</strong>. Whether I'm writing my first lines of JavaScript, researching
+              how start-ups find their customers, or preparing a team presentation, I approach every challenge with
+              curiosity and a willingness to keep improving.
+            </p>
+            <p>
+              I adapt quickly to new environments, enjoy collaborating with people from different backgrounds, and take
+              ownership of the work I deliver. My goal is to grow into a technology professional who builds useful,
+              thoughtful solutions — and to keep learning every step of the way.
+            </p>
+
+            <ul class="about-facts">
+              <!-- CUSTOMIZE: Location and focus (sample values) -->
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Location:</strong> Your City, Country</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg><span><strong>Studying:</strong> University Program (edit me)</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><span><strong>Focus:</strong> Technology &amp; Business</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span><strong>Languages:</strong> English (edit me)</span></li>
+            </ul>
+          </div>
+
+          <div class="about-cards">
+            <article class="value-card reveal" style="--delay: .05s">
+              <span class="value-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+              <h3>Curious</h3>
+              <p>I ask questions, explore new tools, and dig into how things work.</p>
+            </article>
+            <article class="value-card reveal" style="--delay: .1s">
+              <span class="value-icon"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg></span>
+              <h3>Motivated</h3>
+              <p>I set clear goals and follow through with consistent effort.</p>
+            </article>
+            <article class="value-card reveal" style="--delay: .15s">
+              <span class="value-icon"><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg></span>
+              <h3>Adaptable</h3>
+              <p>I stay calm with change and learn quickly in new situations.</p>
+            </article>
+            <article class="value-card reveal" style="--delay: .2s">
+              <span class="value-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h3>Collaborative</h3>
+              <p>I value teamwork, listening, and sharing credit for success.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section section-alt" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">02 — Education</span>
+          <h2 class="section-title" id="education-title">My learning <span class="gradient-text">journey</span></h2>
+          <p class="section-sub">A timeline of my academic path so far. Replace the sample text with your institutions and details.</p>
+        </header>
+
+        <!-- CUSTOMIZE: Edit or add timeline items below -->
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><svg class="icon"><use href="#i-grad"/></svg></span>
+            <article class="timeline-card">
+              <span class="timeline-date">2026 – Present</span>
+              <h3>University Student</h3>
+              <p class="timeline-place">Your University Name · Your Degree Program</p>
+              <p>
+                Building a strong foundation in my chosen field while developing practical skills in technology,
+                research, and teamwork. Actively taking part in coursework projects, group assignments, and
+                student activities.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Coursework</li>
+                <li class="tag">Research</li>
+                <li class="tag">Group Projects</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><svg class="icon"><use href="#i-school"/></svg></span>
+            <article class="timeline-card">
+              <span class="timeline-date">2026</span>
+              <h3>High School Graduate</h3>
+              <p class="timeline-place">Your High School Name · City</p>
+              <p>
+                Graduated with a solid academic record and a growing interest in technology and business.
+                Took part in school events, collaborative projects, and presentations that shaped my
+                communication and leadership skills.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Diploma</li>
+                <li class="tag">Student Activities</li>
+                <li class="tag">Presentations</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">03 — Skills</span>
+          <h2 class="section-title" id="skills-title">What I <span class="gradient-text">bring to the table</span></h2>
+          <p class="section-sub">A mix of technical foundations and people skills. Levels are self-assessed and can be adjusted.</p>
+        </header>
+
+        <!-- Filter buttons for the skill grid -->
+        <div class="skill-filters reveal" role="group" aria-label="Filter skills">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="technical" aria-pressed="false">Technical</button>
+          <button class="filter-btn" data-filter="soft" aria-pressed="false">Interpersonal</button>
+        </div>
+
+        <!--
+          CUSTOMIZE SKILLS:
+          Each card has data-level="0-100" which controls the progress bar width.
+          data-category is "technical" or "soft" (used by the filter buttons).
+        -->
+        <div class="skills-grid">
+          <article class="skill-card reveal" data-category="technical" data-level="75">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
+              <h3>HTML &amp; CSS</h3>
+            </div>
+            <p>Semantic markup, responsive layouts, and modern styling.</p>
+            <div class="progress" role="progressbar" aria-label="HTML and CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">75%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="technical" data-level="60">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-js"/></svg></span>
+              <h3>JavaScript Fundamentals</h3>
+            </div>
+            <p>Variables, functions, DOM manipulation, and events.</p>
+            <div class="progress" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">60%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="85">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+              <h3>Communication</h3>
+            </div>
+            <p>Clear writing, active listening, and confident speaking.</p>
+            <div class="progress" role="progressbar" aria-label="Communication proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">85%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="90">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h3>Teamwork</h3>
+            </div>
+            <p>Reliable team member who supports shared goals.</p>
+            <div class="progress" role="progressbar" aria-label="Teamwork proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">90%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="80">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg></span>
+              <h3>Problem-Solving</h3>
+            </div>
+            <p>Breaking big challenges into clear, manageable steps.</p>
+            <div class="progress" role="progressbar" aria-label="Problem-solving proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">80%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="80">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-present"/></svg></span>
+              <h3>Presentation Skills</h3>
+            </div>
+            <p>Structuring ideas into engaging, well-paced talks.</p>
+            <div class="progress" role="progressbar" aria-label="Presentation skills proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">80%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="65">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-tasks"/></svg></span>
+              <h3>Project Management</h3>
+            </div>
+            <p>Planning tasks, tracking deadlines, and staying organized.</p>
+            <div class="progress" role="progressbar" aria-label="Project management proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">65%</span>
+          </article>
+
+          <article class="skill-card reveal" data-category="soft" data-level="85">
+            <div class="skill-top">
+              <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-bulb"/></svg></span>
+              <h3>Creative Thinking</h3>
+            </div>
+            <p>Finding fresh angles and original solutions.</p>
+            <div class="progress" role="progressbar" aria-label="Creative thinking proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+              <span class="progress-bar"></span>
+            </div>
+            <span class="skill-level">85%</span>
+          </article>
+        </div>
+
+        <!-- Extra tag cloud: tools and interests -->
+        <div class="tag-cloud reveal" aria-label="Tools and interests">
+          <span class="tag-cloud-label">Also exploring:</span>
+          <ul class="tag-list">
+            <li class="tag">Git &amp; GitHub</li>
+            <li class="tag">VS Code</li>
+            <li class="tag">Figma</li>
+            <li class="tag">Microsoft Office</li>
+            <li class="tag">Canva</li>
+            <li class="tag">Market Research</li>
+            <li class="tag">Public Speaking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">04 — Projects</span>
+          <h2 class="section-title" id="projects-title">Selected <span class="gradient-text">work</span></h2>
+          <p class="section-sub">A few projects that show how I learn, build, and collaborate. Click a card to see details.</p>
+        </header>
+
+        <!--
+          CUSTOMIZE PROJECTS:
+          Each card's "View Details" button has data-project="key".
+          The full details shown in the popup are stored in script.js (the "projects" object).
+        -->
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-thumb thumb-1" aria-hidden="true">
+              <!-- Mini mock browser illustration -->
+              <div class="mock-browser">
+                <span class="mock-dots"><i></i><i></i><i></i></span>
+                <span class="mock-line w-60"></span>
+                <span class="mock-line w-40"></span>
+                <span class="mock-blocks"><i></i><i></i><i></i></span>
+              </div>
+              <span class="project-icon"><svg class="icon"><use href="#i-layout"/></svg></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Web Development</span>
+              <h3>Personal Portfolio Website</h3>
+              <p>A responsive website presenting personal information and skills, built with clean, accessible code.</p>
+              <ul class="tag-list">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <button class="btn btn-small btn-outline" data-project="portfolio" aria-haspopup="dialog">
+                View Details
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: .1s">
+            <div class="project-thumb thumb-2" aria-hidden="true">
+              <div class="mock-shop">
+                <span class="mock-product"><i></i><b></b></span>
+                <span class="mock-product"><i></i><b></b></span>
+                <span class="mock-product"><i></i><b></b></span>
+              </div>
+              <span class="project-icon"><svg class="icon"><use href="#i-cart"/></svg></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">UI Concept</span>
+              <h3>E-Commerce Concept</h3>
+              <p>A concept for an online store with a clean interface, product cards, and a simple shopping flow.</p>
+              <ul class="tag-list">
+                <li class="tag">UI/UX Design</li>
+                <li class="tag">Product Cards</li>
+                <li class="tag">Business</li>
+              </ul>
+              <button class="btn btn-small btn-outline" data-project="ecommerce" aria-haspopup="dialog">
+                View Details
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: .2s">
+            <div class="project-thumb thumb-3" aria-hidden="true">
+              <div class="mock-team">
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <span class="project-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Team Project</span>
+              <h3>Student Team Project</h3>
+              <p>A collaborative project focused on research, presentation, and creative problem-solving.</p>
+              <ul class="tag-list">
+                <li class="tag">Research</li>
+                <li class="tag">Teamwork</li>
+                <li class="tag">Presentation</li>
+              </ul>
+              <button class="btn btn-small btn-outline" data-project="team" aria-haspopup="dialog">
+                View Details
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="section" id="achievements" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">05 — Achievements</span>
+          <h2 class="section-title" id="achievements-title">Growth &amp; <span class="gradient-text">milestones</span></h2>
+        </header>
+
+        <!-- Clear notice that this is editable sample content -->
+        <p class="sample-note reveal" role="note">
+          <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+          <span><strong>Sample content:</strong> the items below are editable examples, not verified personal achievements.
+          Replace them with your own accomplishments before sharing.</span>
+        </p>
+
+        <!-- CUSTOMIZE: Replace these four cards with your own achievements -->
+        <div class="achievements-grid">
+          <article class="achievement-card reveal">
+            <span class="achievement-icon"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg></span>
+            <h3>Academic Development</h3>
+            <p>Consistently building strong study habits and a solid academic foundation across core subjects.</p>
+            <span class="achievement-meta">Example · Ongoing</span>
+          </article>
+
+          <article class="achievement-card reveal" style="--delay: .08s">
+            <span class="achievement-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3>Teamwork &amp; Collaboration</h3>
+            <p>Contributed to group projects by coordinating tasks, sharing research, and supporting teammates.</p>
+            <span class="achievement-meta">Example · Group projects</span>
+          </article>
+
+          <article class="achievement-card reveal" style="--delay: .16s">
+            <span class="achievement-icon"><svg class="icon" aria-hidden="true"><use href="#i-flag"/></svg></span>
+            <h3>Student Activities</h3>
+            <p>Participated in student clubs, events, and initiatives that build leadership and community.</p>
+            <span class="achievement-meta">Example · Campus life</span>
+          </article>
+
+          <article class="achievement-card reveal" style="--delay: .24s">
+            <span class="achievement-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>Continuous Learning</h3>
+            <p>Completing online courses and self-study in web development, business, and productivity.</p>
+            <span class="achievement-meta">Example · Self-directed</span>
+          </article>
+        </div>
+
+        <!-- Inspirational quote banner -->
+        <figure class="quote-banner reveal">
+          <svg class="icon quote-icon" aria-hidden="true"><use href="#i-star"/></svg>
+          <blockquote>
+            <p>"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice."</p>
+          </blockquote>
+          <figcaption>— Brian Herbert</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">06 — Contact</span>
+          <h2 class="section-title" id="contact-title">Let's <span class="gradient-text">work together</span></h2>
+          <p class="section-sub">Have a question, an opportunity, or just want to say hello? I'd love to hear from you.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- CUSTOMIZE: Replace placeholder contact details with your own -->
+          <aside class="contact-info reveal" aria-label="Contact details">
+            <a class="contact-item" href="mailto:alex.morgan@example.com">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span>
+                <small>Email</small>
+                <strong>alex.morgan@example.com</strong>
+              </span>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+              <span>
+                <small>LinkedIn</small>
+                <strong>linkedin.com/in/your-profile</strong>
+              </span>
+            </a>
+            <a class="contact-item" href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></span>
+              <span>
+                <small>GitHub</small>
+                <strong>github.com/your-username</strong>
+              </span>
+            </a>
+            <div class="contact-item static">
+              <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <span>
+                <small>Location</small>
+                <strong>Your City, Country</strong>
+              </span>
+            </div>
+
+            <div class="availability">
+              <span class="status-dot" aria-hidden="true"></span>
+              Usually replies within 24–48 hours
+            </div>
+          </aside>
+
+          <!--
+            CONTACT FORM — FRONT-END DEMO ONLY
+            This form demonstrates client-side validation and a success message.
+            It does NOT send emails because there is no backend/server.
+            See README.md for ways to connect it to a real service.
+          -->
+          <form class="contact-form reveal" id="contactForm" novalidate style="--delay: .1s">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required aria-describedby="name-error">
+                <p class="error-msg" id="name-error" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required aria-describedby="email-error">
+                <p class="error-msg" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me a little about your idea or question..." required maxlength="1000" aria-describedby="message-error message-count"></textarea>
+              <div class="form-meta">
+                <p class="error-msg" id="message-error" aria-live="polite"></p>
+                <span class="char-count" id="message-count">0 / 1000</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span class="btn-label">Send Message</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+            </button>
+
+            <p class="form-note">
+              <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+              Demo form: messages are validated in your browser but not actually sent.
+            </p>
+
+            <!-- Success message (hidden until the form is valid and submitted) -->
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+              <span class="success-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+              <div>
+                <strong>Thank you<span id="successName"></span>!</strong>
+                <p>Your message passed validation. In a live version it would be delivered to my inbox — I'd get back to you soon.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="Alex Morgan — back to top">
+          <span class="logo-mark">AM</span>
+          <span class="logo-text">Alex<span class="accent">.</span>Morgan</span>
+        </a>
+        <p>Student and aspiring technology professional, building skills one project at a time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <!-- CUSTOMIZE: Social media links -->
+        <ul class="social-list">
+          <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+          <li><a href="https://x.com/your-handle" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a></li>
+          <li><a href="mailto:alex.morgan@example.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <!-- The year is filled in automatically by script.js -->
+      <p>&copy; <span id="year">2026</span> Alex Morgan. All rights reserved.</p>
+      <p>Designed &amp; built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button (appears after scrolling down) -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <!-- ==================== PROJECT MODAL ==================== -->
+  <!-- One reusable dialog; script.js fills in the content for the selected project -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" data-close aria-label="Close project details">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <div class="modal-header">
+        <span class="modal-icon" id="modalIcon"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></span>
+        <div>
+          <span class="project-type" id="modalType"></span>
+          <h3 id="modalTitle">Project</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p id="modalDescription"></p>
+        <div class="modal-columns">
+          <div>
+            <h4>Key features</h4>
+            <ul class="check-list" id="modalFeatures"></ul>
+          </div>
+          <div>
+            <h4>What I learned</h4>
+            <ul class="check-list" id="modalLearned"></ul>
+          </div>
+        </div>
+        <h4>Tools &amp; skills</h4>
+        <ul class="tag-list" id="modalTags"></ul>
+        <dl class="modal-meta">
+          <div><dt>Role</dt><dd id="modalRole"></dd></div>
+          <div><dt>Timeline</dt><dd id="modalTimeline"></dd></div>
+          <div><dt>Status</dt><dd id="modalStatus"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container for small notifications -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
