@@ -12,7 +12,8 @@ No frameworks, no build step, no database. Open `index.html` in a browser and it
 car-website/
 ├── index.html   → Page structure: header, hero, inventory, Camry guide, finance, reviews, contact, footer, modals
 ├── style.css    → All styling, animations and responsive layouts (colors are variables at the top)
-├── script.js    → Car data + all interactivity (filters, details, compare, favorites, calculator, form)
+├── script.js    → Car data, photo credits + all interactivity (filters, details, compare, favorites, calculator, form)
+├── images/      → Car photos (Wikimedia Commons, free licenses)
 └── README.md    → This guide
 ```
 
@@ -60,11 +61,15 @@ Open `script.js` and edit the `cars` list at the top. Each car looks like this:
 
 Filters, the Model dropdown, the calculator, the test-drive form and the Camry guide prices all update automatically.
 
-### Car pictures
-The cars are drawn as SVG illustrations in each car's paint color, so the site needs no image files and always works offline.
-To use real photos, put an image such as `photos/camry70.jpg` in the folder, then in `script.js` replace
-`${carSVG(car.hex, car.body)}` inside `cardHTML` and `detailsHTML` with
-`<img src="photos/${car.id}.jpg" alt="${carName(car)} ${car.year}">`. Use only photos you have the right to use.
+### Car photos
+Each listing shows a real photo of the same make, model and generation, saved in `images/` and named after the car's `id`
+(for example `images/camry70-2021.jpg`). The photos come from **Wikimedia Commons** and are used under free licenses
+(CC BY-SA, CC BY or CC0). These licenses require credit, so the author and license appear under the photo in the details popup
+and in the **Photo credits** list in the footer. The photos show the model, not the exact car for sale.
+
+To change a photo, replace the file in `images/` (keep the same name) and update that car's entry in the `photos` object
+at the top of `script.js` (author, license, source link). Use only your own photos or freely licensed ones.
+If a photo file is missing, the site automatically shows a drawn illustration of the car in its paint color.
 
 ### Dealership name and contacts
 In `index.html`, search for `Mahmud` and `CUSTOMIZE`. Replace the phone number, email and social links (they're placeholders).

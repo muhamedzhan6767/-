@@ -25,7 +25,7 @@
       id: "camry80-2025", brand: "Toyota", model: "Camry 80", generation: "XV80 · 9th generation",
       year: 2025, price: 22900000, mileage: 4800, engine: "2.5 L", power: 200, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "FWD", body: "Sedan", city: "Almaty",
-      color: "Emotional Red", hex: "#b91c1c", badges: [["New arrival", "red"]],
+      color: "Silver Metallic", hex: "#b8bcc2", badges: [["New arrival", "red"]],
       description: "The newest Camry generation with a sharp new design, a large touchscreen, digital dashboard and the latest Toyota Safety Sense. Practically new, still under factory warranty.",
       features: ["Toyota Safety Sense 3.0", "12.3\" touchscreen", "Digital dashboard", "Wireless CarPlay / Android Auto", "Heated & ventilated seats", "Adaptive cruise control"]
     },
@@ -41,7 +41,7 @@
       id: "camry70-2021", brand: "Toyota", model: "Camry 70", generation: "XV70 · 8th generation",
       year: 2021, price: 16800000, mileage: 54000, engine: "2.5 L", power: 181, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "FWD", body: "Sedan", city: "Almaty",
-      color: "Attitude Black", hex: "#111827", badges: [["Best seller", "red"]],
+      color: "Pearl White", hex: "#f1f5f9", badges: [["Best seller", "red"]],
       description: "Facelifted Camry 70 in the popular Prestige trim. One owner, full service history at the official dealer.",
       features: ["Leather interior", "Toyota Safety Sense", "Rear camera", "Blind spot monitor", "LED headlights", "Dual-zone climate"]
     },
@@ -49,7 +49,7 @@
       id: "camry70-v6-2019", brand: "Toyota", model: "Camry 70", generation: "XV70 · 8th generation",
       year: 2019, price: 15200000, mileage: 88000, engine: "3.5 L V6", power: 249, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "FWD", body: "Sedan", city: "Shymkent",
-      color: "Silver Metallic", hex: "#9ca3af", badges: [["V6", ""]],
+      color: "Dark Bronze Metallic", hex: "#3b3430", badges: [["V6", ""]],
       description: "Powerful Camry 70 with the 3.5 V6 engine — strong acceleration and a comfortable ride. Lux Safety+ trim.",
       features: ["3.5 V6 (249 hp)", "JBL audio", "Head-up display", "Ventilated seats", "Sunroof", "Keyless entry"]
     },
@@ -81,7 +81,7 @@
       id: "grandeur-ig-2020", brand: "Hyundai", model: "Grandeur", generation: "IG facelift · 6th generation",
       year: 2020, price: 15900000, mileage: 62000, engine: "2.5 L GDi", power: 198, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "FWD", body: "Sedan", city: "Astana",
-      color: "Copper Brown", hex: "#7c4a2d", badges: [],
+      color: "Midnight Black Pearl", hex: "#111111", badges: [],
       description: "Spacious and comfortable Grandeur IG facelift with a premium feel and generous equipment for the price.",
       features: ["Leather interior", "Navigation", "Smart cruise control", "Ventilated seats", "Infinity audio", "Power trunk"]
     },
@@ -97,7 +97,7 @@
       id: "lc300-2023", brand: "Toyota", model: "Land Cruiser 300", generation: "J300",
       year: 2023, price: 52000000, mileage: 15000, engine: "3.5 L V6 Twin-Turbo", power: 415, fuel: "Petrol",
       transmission: "Automatic (10-speed)", drive: "4WD", body: "SUV", city: "Almaty",
-      color: "Black", hex: "#0f172a", badges: [["Flagship", "red"]],
+      color: "Precious White Pearl", hex: "#f5f5f4", badges: [["Flagship", "red"]],
       description: "The flagship Land Cruiser 300 — luxury, power and legendary off-road ability in one car. VIP trim.",
       features: ["415 hp twin-turbo V6", "E-KDSS suspension", "Rear entertainment", "Fingerprint start", "JBL 14 speakers", "Cooled box"]
     },
@@ -105,7 +105,7 @@
       id: "rav4-2022", brand: "Toyota", model: "RAV4", generation: "XA50 · 5th generation",
       year: 2022, price: 15400000, mileage: 40000, engine: "2.0 L", power: 173, fuel: "Petrol",
       transmission: "CVT", drive: "AWD", body: "SUV", city: "Shymkent",
-      color: "Lunar Rock", hex: "#8a8f86", badges: [["AWD", ""]],
+      color: "Super White", hex: "#f5f5f5", badges: [["AWD", ""]],
       description: "Practical and reliable RAV4 with all-wheel drive — a great family crossover for city and countryside.",
       features: ["AWD", "Toyota Safety Sense", "Power tailgate", "Apple CarPlay", "Heated seats", "LED headlights"]
     },
@@ -113,7 +113,7 @@
       id: "corolla-2022", brand: "Toyota", model: "Corolla", generation: "E210 · 12th generation",
       year: 2022, price: 10200000, mileage: 35000, engine: "1.6 L", power: 122, fuel: "Petrol",
       transmission: "CVT", drive: "FWD", body: "Sedan", city: "Almaty",
-      color: "Celestite Blue", hex: "#1e40af", badges: [["Economical", "green"]],
+      color: "Celestite Grey", hex: "#8fa0b0", badges: [["Economical", "green"]],
       description: "Modern Corolla with low fuel consumption and Toyota reliability. Ideal first car or city car.",
       features: ["Toyota Safety Sense", "8\" touchscreen", "Rear camera", "Climate control", "LED lights"]
     },
@@ -121,7 +121,7 @@
       id: "sonata-2021", brand: "Hyundai", model: "Sonata", generation: "DN8 · 8th generation",
       year: 2021, price: 12800000, mileage: 60000, engine: "2.5 L", power: 180, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "FWD", body: "Sedan", city: "Astana",
-      color: "Hampton Grey", hex: "#6b7280", badges: [],
+      color: "Flame Red", hex: "#c81e1e", badges: [],
       description: "Stylish Sonata DN8 with coupe-like design and lots of technology — a strong alternative to the Camry.",
       features: ["Digital cockpit", "Smart cruise control", "Blind spot view monitor", "Wireless charging", "Bose audio"]
     },
@@ -137,7 +137,7 @@
       id: "tucson-2023", brand: "Hyundai", model: "Tucson", generation: "NX4 · 4th generation",
       year: 2023, price: 14500000, mileage: 22000, engine: "2.0 L", power: 150, fuel: "Petrol",
       transmission: "Automatic (6-speed)", drive: "AWD", body: "SUV", city: "Almaty",
-      color: "Teal Green", hex: "#0f766e", badges: [["AWD", ""]],
+      color: "Dark Teal Grey", hex: "#2f4a48", badges: [["AWD", ""]],
       description: "Bold Tucson NX4 with parametric hidden headlights, a spacious cabin and all-wheel drive.",
       features: ["AWD", "Panoramic display", "Smart power tailgate", "Surround view", "Heated steering wheel"]
     },
@@ -145,7 +145,7 @@
       id: "santafe-2021", brand: "Hyundai", model: "Santa Fe", generation: "TM facelift · 4th generation",
       year: 2021, price: 17900000, mileage: 45000, engine: "2.5 L", power: 180, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "AWD", body: "SUV", city: "Astana",
-      color: "Magnetic Silver", hex: "#a3a8b0", badges: [],
+      color: "White Cream", hex: "#f2f0ea", badges: [],
       description: "Comfortable family SUV with optional third row, HTRAC all-wheel drive and premium equipment.",
       features: ["HTRAC AWD", "7 seats", "Head-up display", "Krell audio", "Ventilated seats", "Panoramic roof"]
     },
@@ -153,7 +153,7 @@
       id: "palisade-2022", brand: "Hyundai", model: "Palisade", generation: "LX2",
       year: 2022, price: 24900000, mileage: 38000, engine: "3.5 L V6", power: 249, fuel: "Petrol",
       transmission: "Automatic (8-speed)", drive: "AWD", body: "SUV", city: "Almaty",
-      color: "Moonlight Cloud", hex: "#1e3a5f", badges: [["8 seats", ""]],
+      color: "Steel Graphite", hex: "#3a4048", badges: [["8 seats", ""]],
       description: "Hyundai's largest SUV: three full rows, quiet V6 and luxury-level comfort for big families.",
       features: ["8 seats", "HTRAC AWD", "Nappa leather", "Rear seat quiet mode", "Harman Kardon audio", "Smart cruise control"]
     }
@@ -167,6 +167,21 @@
      ------------------------------------------------------------------------ */
   const photos = {
     /*PHOTOS_START*/
+    "camry80-2025": {"file": "images/camry80-2025.jpg", "title": "TOYOTA CAMRY (XV80) China (10).jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_CAMRY_(XV80)_China_(10).jpg"},
+    "camry80-hybrid-2025": {"file": "images/camry80-hybrid-2025.jpg", "title": "TOYOTA CAMRY (XV80) China (32).jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:TOYOTA_CAMRY_(XV80)_China_(32).jpg"},
+    "camry70-2021": {"file": "images/camry70-2021.jpg", "title": "Toyota Camry XV70 facelift Sanming 01 2022-08-13.jpg", "author": "JamesYoung8167", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_Camry_XV70_facelift_Sanming_01_2022-08-13.jpg"},
+    "camry70-v6-2019": {"file": "images/camry70-v6-2019.jpg", "title": "Toyota XV70 Camry in Central, Hong Kong (Front).jpg", "author": "Corsadent56709", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_XV70_Camry_in_Central,_Hong_Kong_(Front).jpg"},
+    "grandeur-gn7-2023": {"file": "images/grandeur-gn7-2023.jpg", "title": "0 Hyundai Grandeur Hybrid (GN7) 1.jpg", "author": "Benespit", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:0_Hyundai_Grandeur_Hybrid_(GN7)_1.jpg"},
+    "grandeur-ig-2020": {"file": "images/grandeur-ig-2020.jpg", "title": "Hyundai Grandeur Calligraphy IG FL Midnight Black Pearl (4).jpg", "author": "Damian B Oh", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Grandeur_Calligraphy_IG_FL_Midnight_Black_Pearl_(4).jpg"},
+    "prado-2021": {"file": "images/prado-2021.jpg", "title": "Toyota Land Cruiser Prado J150 LWB facelift II China 2019-04-03.jpg", "author": "Navigator84", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_Land_Cruiser_Prado_J150_LWB_facelift_II_China_2019-04-03.jpg"},
+    "lc300-2023": {"file": "images/lc300-2023.jpg", "title": "2021 Toyota Land Cruieser 300 ZX.jpg", "author": "TTTNIS", "license": "CC0", "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en", "source": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Land_Cruieser_300_ZX.jpg"},
+    "rav4-2022": {"file": "images/rav4-2022.jpg", "title": "Toyota RAV4 Hybrid (XA50) DSC 2709 (cropped).jpg", "author": "Alexander Migl", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_RAV4_Hybrid_(XA50)_DSC_2709_(cropped).jpg"},
+    "corolla-2022": {"file": "images/corolla-2022.jpg", "title": "Toyota Corolla Hybrid Sedan, GIMS 2019, Le Grand-Saconnex (GIMS1338).jpg", "author": "Matti Blume", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Hybrid_Sedan,_GIMS_2019,_Le_Grand-Saconnex_(GIMS1338).jpg"},
+    "sonata-2021": {"file": "images/sonata-2021.jpg", "title": "HYUNDAI SONATA DN8 China.jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:HYUNDAI_SONATA_DN8_China.jpg"},
+    "elantra-2022": {"file": "images/elantra-2022.jpg", "title": "HYUNDAI ELANTRA CN7 China (49).jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:HYUNDAI_ELANTRA_CN7_China_(49).jpg"},
+    "tucson-2023": {"file": "images/tucson-2023.jpg", "title": "HYUNDAI TUCSON HYBRID (NX4) China.jpg", "author": "Dinkun Chen", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:HYUNDAI_TUCSON_HYBRID_(NX4)_China.jpg"},
+    "santafe-2021": {"file": "images/santafe-2021.jpg", "title": "Hyundai Santa Fe TM FL White 1.jpg", "author": "Damian B Oh", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Santa_Fe_TM_FL_White_1.jpg"},
+    "palisade-2022": {"file": "images/palisade-2022.jpg", "title": "Hyundai Palisade LX2 Steel Graphite (6).jpg", "author": "Damian B Oh", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0", "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Palisade_LX2_Steel_Graphite_(6).jpg"},
     /*PHOTOS_END*/
   };
 
