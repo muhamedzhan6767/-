@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Alex Morgan — Personal Portfolio
+   Mukhamejan Seiit — Personal Portfolio
    script.js
 
    Plain (vanilla) JavaScript — no libraries or frameworks required.

@@ -1,4 +1,4 @@
-# Alex Morgan — Personal Portfolio Website
+# Mukhamejan Seiit — Personal Portfolio Website
 
 A modern, responsive personal portfolio website built with **HTML5, CSS3 and vanilla JavaScript**.
 It presents personal information, education, skills, projects, achievements and contact details in a
@@ -70,8 +70,8 @@ Search for `CUSTOMIZE` to find every spot that needs your details.
 ### Name and title
 In `index.html`:
 - `<title>` and `<meta name="description">` in the `<head>`.
-- The logo initials `AM` and the text `Alex.Morgan` (appears in the navigation **and** the footer).
-- The hero heading: `Hi, I'm <span class="gradient-text">Alex Morgan</span>`.
+- The logo initials `MS` and the text `Mukhamejan.Seiit` (appears in the navigation **and** the footer).
+- The hero heading: `Hi, I'm <span class="gradient-text">Mukhamejan Seiit</span>`.
 - The subtitle: `Aspiring Technology Professional`.
 - The copyright line in the footer.
 
@@ -113,11 +113,11 @@ Replace the four sample cards with your own. Once your content is real, delete t
 
 ### Contact information
 In `index.html`, replace:
-- `alex.morgan@example.com` (in the contact section **and** the footer social icons),
+- `mukhamejan.seiit@example.com` (in the contact section **and** the footer social icons),
 - `https://www.linkedin.com/in/your-profile`,
 - `https://github.com/your-username`,
 - `https://x.com/your-handle` (footer),
-- `Your City, Country`.
+- `Kazakhstan` (location).
 
 ### Colors and fonts
 At the top of `style.css`, change the variables in `:root`, for example `--purple`, `--blue` and `--bg`.
